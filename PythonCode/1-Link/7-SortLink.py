@@ -18,7 +18,6 @@ class link:
 
         return head.next
 
-
 '''归并排序链表'''
 def SortLink(head):
     if not head or not head.next:
