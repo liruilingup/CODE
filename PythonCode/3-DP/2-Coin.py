@@ -48,7 +48,7 @@ def CoinChangeDp(coins, amount):
     for i in range(len(dp)):
         for coin in coins:
             if i - coin < 0: continue
-            dp[i] = min(dp[i], 1+dp[i-coin])
+            dp[i] = min(dp[i], 1 + dp[i-coin])
     return dp[-1] if dp[amount] != (amount + 1) else -1 # 判断根据初始化
 print('使用动态规划的方法', CoinChangeDp(coins, amount))
 

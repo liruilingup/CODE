@@ -47,5 +47,29 @@ def LevelorderTraversal1(root):
 print(LevelorderTraversal1(root))
 
 
+'''简单的层次遍历，level1和level结果一样'''
 
+def level(root):
+    res = []
+    queue = [root]
+    while queue:
+        node = queue.pop(0)
+        if not node:continue
+        res.append(node.item)
+        queue.append(node.left)
+        queue.append(node.right)
+    print(res)
+level(root)
 
+def level1(root):
+    res = []
+    queue = [root]
+    while queue:
+        node = queue.pop(0)
+        res.append(node.item)
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
+    print(res)
+level1(root)

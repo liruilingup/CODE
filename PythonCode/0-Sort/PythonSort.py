@@ -28,7 +28,7 @@ print('3、先按照x[1]升序，再按照x[0]降序，sorted()排序后的数�
 
 '''字典的排序'''
 dicta = {'a':10, 'd':8, 'c':11}
-dict_sort = sorted(dicta.items(), key=lambda x:(x[0]))
+dict_sort = sorted(dicta.items(), key=lambda x:(x[1]))
 print('字典的排序结果', dict_sort)
 
 

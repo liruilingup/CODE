@@ -7,11 +7,11 @@ def LongestPalindromeSubseq(s):
     n = len(s)
     dp = [[0 for i in range(n)] for j in range(n)]
 
-    for i in range(n):
+    for i in range(n): # 定义了base case
         dp[i][i] = 1
 
-    for i in range(n-2, -1, -1):
-        for j in range(i+1, n):
+    for i in range(n-2, -1, -1): # 从下向上
+        for j in range(i+1, n): # 从左向右
             if s[i] == s[j]:
                 dp[i][j] = dp[i+1][j-1] + 2
             else:
