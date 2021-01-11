@@ -1,3 +1,4 @@
+'''使用动态规划'''
 def maxSubArray(nums):
     dp = [0] * len(nums)
     dp[0] = nums[0]  # 第一个元素没有子数组

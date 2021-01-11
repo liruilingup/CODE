@@ -1,3 +1,6 @@
+'''
+归并
+'''
 class Solution:
     def mergeSort(self, nums, tmp, l, r):
         if l >= r:
@@ -25,7 +28,7 @@ class Solution:
         nums[l:r+1] = tmp[l:r+1]
         return inv_count
 
-    def reversePairs(self, nums: List[int]) -> int:
+    def reversePairs(self, nums):
         n = len(nums)
         tmp = [0] * n
         return self.mergeSort(nums, tmp, 0, n - 1)

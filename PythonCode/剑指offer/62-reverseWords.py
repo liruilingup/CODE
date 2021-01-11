@@ -8,3 +8,7 @@ def reverseWords(s):
         while s[i] == ' ': i -= 1  # 跳过单词间空格
         j = i  # j 指向下个单词的尾字符
     return ' '.join(res)  # 拼接并返回
+
+print(reverseWords("the sky is blue"))
+
+

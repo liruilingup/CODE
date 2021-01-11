@@ -1,3 +1,5 @@
+# 如treenode(2).right=treenode(3)
+# 要treenode(3).left=treenode(2)
 
 def treeToDoublyList(self, root: 'Node') -> 'Node':
     def dfs(cur):
@@ -6,7 +8,7 @@ def treeToDoublyList(self, root: 'Node') -> 'Node':
         if self.pre: # 修改节点引用
             self.pre.right, cur.left = cur, self.pre
         else: # 记录头节点
-            self.head = cur
+            self.head = cur # 第一次的时候用于保存头结点
         self.pre = cur # 保存 cur
         dfs(cur.right) # 递归右子树
 

@@ -12,7 +12,7 @@ class MaxQueue:
 
     def push_back(self, value: int) -> None:
         self.queue.put(value)
-        while self.deque and self.deque[-1] < value:
+        while self.deque and self.deque[-1] < value: # 维护单调队列
             self.deque.pop()
         self.deque.append(value)
 

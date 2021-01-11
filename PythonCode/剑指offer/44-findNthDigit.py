@@ -1,3 +1,4 @@
+# 变化规律
 def findNthDigit(n):
     digit, start, count = 1, 1, 9
     while n > count:  # 1.

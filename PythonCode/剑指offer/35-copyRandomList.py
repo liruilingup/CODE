@@ -4,6 +4,7 @@ class Node:
         self.next = next
         self.random = random
 
+'''使用字典记录节点，重新构建一下'''
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
         if not head: return

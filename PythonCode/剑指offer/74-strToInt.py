@@ -1,3 +1,11 @@
+'''
+分情况判断
+1、空格
+2、符号位
+3、非数字字符
+4、字符转数字拼接+超过最大的值进行判断
+'''
+
 def strToInt( str):
     res, i, sign, length = 0, 0, 1, len(str)
     int_max, int_min, bndry = 2 ** 31 - 1, -2 ** 31, 2 ** 31 // 10

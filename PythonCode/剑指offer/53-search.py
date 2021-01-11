@@ -1,6 +1,7 @@
-def search( nums, target):
+def search(nums, target):
     def helper(tar):
         i, j = 0, len(nums) - 1
+
         while i <= j:
             m = (i + j) // 2
             if nums[m] <= tar:

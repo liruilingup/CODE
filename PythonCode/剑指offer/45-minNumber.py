@@ -1,3 +1,6 @@
+# 本质是排序问题
+# 字符串排序： x + y < y + x 才可以得出 x <y ， 在快排的条件下改下
+
 def minNumber(nums):
     def fast_sort(l, r):
         if l >= r: return

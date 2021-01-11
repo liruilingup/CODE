@@ -1,3 +1,6 @@
+'''
+使用哈希
+'''
 def firstUniqChar(s):
     dic = {}
     for c in s:

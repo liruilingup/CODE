@@ -1,3 +1,6 @@
+'''
+质数的变化
+'''
 def nthUglyNumber(n):
     dp, a, b, c = [1] * n, 0, 0, 0
     for i in range(1, n):

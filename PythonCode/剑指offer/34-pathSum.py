@@ -29,3 +29,21 @@ def pathSum(root, sum):
     recur(root, sum)
     return res
 print(pathSum(root, 22))
+
+
+# 方法2
+def pathSum2(root, sum1):
+    if not root:return []
+    res, path = [], []
+    def recur(root):
+        if not root:return
+        path.append(root.val)
+        if sum(path) == sum1 and not root.left and not root.right:
+            res.append(list(path))
+        recur(root.left)
+        recur(root.right)
+        path.pop()
+
+    recur(root)
+    return res
+print(pathSum2(root, 22))
