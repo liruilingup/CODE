@@ -1,6 +1,7 @@
 
 '''剑指 Offer 12. 矩阵中的路径'''
 # 使用dfs+回溯解法
+# 先确定边界值，然后需要标记搜索过的，最后再回溯
 def exist(board, word):
     def dfs(i, j, k):
         if not 0 <= i < len(board) or not 0 <= j < len(board[0]) or board[i][j] != word[k]: return False # 边界和不相等的时候结束

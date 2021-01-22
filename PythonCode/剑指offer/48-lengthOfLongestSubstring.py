@@ -23,6 +23,7 @@ print('使用双指针和哈希表结果', lengthOfLongestSubstring2('abcabcbb')
 # 方法三：使用滑动窗口
 
 def lengthOfLongestSubstring3(s):
+    if not s:return 0
     if len(s) == 1:return 1
     i=0
     j = 0

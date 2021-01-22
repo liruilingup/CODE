@@ -8,6 +8,7 @@
 
 
 temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
+nums = [2,1,2,4,3]
 def dailyTemperatures(T):
     stack = []
     res = [0] * len(T)
@@ -16,7 +17,7 @@ def dailyTemperatures(T):
         while stack and T[i] > T[stack[-1]]:
             index = stack.pop()
             res[index] = i - index
-        stack.append(i)
+        stack.append(T[i])
     return res
 
-print(dailyTemperatures(temperatures))
+print(dailyTemperatures(nums))

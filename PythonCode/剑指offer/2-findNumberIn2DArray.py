@@ -2,7 +2,7 @@
 # 线性查找时间复杂度是 o(m+n)
 # 若 flag > target ，则 target 一定在 flag 所在 行的上方，即 flag 所在行可被消去。
 # 若 flag < target ，则 target 一定在 flag 所在 列的右方，即 flag 所在列可被消去。
-
+'''从左下角或者右上角开始都可以'''
 def findNumberIn2DArray(matrix, target):
     i = len(matrix) - 1
     j = 0

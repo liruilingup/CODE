@@ -2,6 +2,7 @@
 '''剑指 Offer 13. 机器人的运动范围'''
 
 # 使用广度优先，就是向右、向下
+# 使用queue和s
 class movingCount:
     def __init__(self):
         return
