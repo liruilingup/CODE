@@ -7,7 +7,7 @@ def numIslands(grid):
     m = len(grid)
     n = len(grid[0])
     def dfs(grid, i,j):
-        if not 0<=i<m or not 0<=j<n or grid[i][j] != '':
+        if not 0<=i<m or not 0<=j<n or grid[i][j] == '0':
             return
         grid[i][j] = '0'
         dfs(grid, i, j-1)
