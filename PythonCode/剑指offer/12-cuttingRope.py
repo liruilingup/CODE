@@ -36,3 +36,4 @@ def cuttingRope2(n):
 
 print('动态规划结果', cuttingRope2(2))
 
+

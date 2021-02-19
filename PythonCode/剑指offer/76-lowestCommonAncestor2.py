@@ -17,7 +17,7 @@ tree3 = treenode(3, tree5, tree1)
 2、p=root，且q在 root 的左或右子树中
 3、q=root，且p在 root 的左或右子树中
 使用后序遍历：如果左子树、右子树都不是最近公共祖先，那么就是根节点
-1、递归结束条件：if not root or root=p or root=q:return root
+1、递归结束条件：if not root or root=p or root=q: return root
 2、判断左子树
 3、判断右子树
 4、如果左右子树都不是，返回空
@@ -26,13 +26,14 @@ tree3 = treenode(3, tree5, tree1)
 7、上诉情况不符合，返回根节点
 '''
 def lowestCommonAncestor(root, p, q):
+    # 要找到p和q在哪，是root还是root.left还是root.right
     if not root or root == p or root == q: return root
-    left = lowestCommonAncestor(root.left, p, q)
-    right = lowestCommonAncestor(root.right, p, q)
+    left = lowestCommonAncestor(root.left, p, q) # 说明找到了p或者q，或者空
+    right = lowestCommonAncestor(root.right, p, q) # 说明找到了p或者q，或者空
     if not left and not right: return  # 1. 可以不要
-    if not left: return right  # 3.
-    if not right: return left  # 4.
-    return root  # 2. if left and right:
+    if not left: return right  # 3.说明p或者q都不在root的left，找右子树
+    if not right: return left  # 4.说明p或者q都不在root的right，找左子树
+    return root  # 2. if left and right，p或者q在root的left和right两侧，公共就是root
 
 print('验证结果', lowestCommonAncestor(tree3, tree1, tree5).val)
 

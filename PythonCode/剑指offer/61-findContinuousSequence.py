@@ -21,3 +21,27 @@ def findContinuousSequence(target):
             sum -= i
             i += 1
     return res
+
+
+
+# 使用双指针，自己写的
+def findContinuousSequence1(target):
+    i=j=1
+    sum = 0
+    res = []
+    while i < target:
+        if sum <target:
+            sum += j
+            j+=1
+        elif sum > target:
+            sum = 0
+            i += 1
+            j = i
+        else:
+            res.append(list(range(i,j)))
+            sum = 0
+            i += 1
+            j=i
+
+    return res
+print(findContinuousSequence1(9))

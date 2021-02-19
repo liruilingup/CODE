@@ -28,7 +28,20 @@ def lowestCommonAncestor(root, p, q):
         return lowestCommonAncestor(root.left, p, q)
     return root
 
-print('结果', lowestCommonAncestor(tree6, tree2, tree8).val)
+print('结果1', lowestCommonAncestor(tree6, tree2, tree8).val)
+
+
+def lowestCommonAncestor1(root, p, q):
+    # 有可能正好的root正好是p或者q节点
+    if (p.val < root.val and root.val < q.val) or (
+            q.val < root.val and p.val > root.val) or root.val == p.val or q.val == root.val:
+        return root
+
+    if p.val < root.val and q.val < root.val:
+        return lowestCommonAncestor(root.left, p, q)
+    if p.val > root.val and q.val > root.val:
+        return lowestCommonAncestor(root.right, p, q)
+print('结果2', lowestCommonAncestor1(tree6, tree2, tree8).val)
 
 
 

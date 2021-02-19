@@ -14,9 +14,9 @@ def translateNum2(num):
     dp = [1] * (len(s)+1)
     for i in range(2, len(s)+1):
         if "10" <= s[i-2:i]<= "25": # 可翻译
-            dp[i] = dp[i-1] + dp[i-2]
+            dp[i] = dp[i-1] + dp[i-2] # 组合的情况+不组合的情况
         else:
-            dp[i] = dp[i-1]
+            dp[i] = dp[i-1] # 不可翻译，
     return dp[-1]
 
 print('', translateNum2(12258))

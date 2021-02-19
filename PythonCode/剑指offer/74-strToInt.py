@@ -17,7 +17,7 @@ def strToInt( str):
     if str[i] in '+-': i += 1
     for c in str[i:]:
         if not '0' <= c <= '9': break
-        if res > bndry or res == bndry and c > '7':
+        if res > bndry or res == bndry and c > '7': # 2 ** 31 - 1 最后一位是7
             return int_max if sign == 1 else int_min
         res = 10 * res + ord(c) - ord('0')
     return sign * res

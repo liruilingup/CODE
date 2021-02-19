@@ -17,8 +17,7 @@ def change(amount, coins):
     dp[0][0] = 1
     for i in range(1, len(coins) + 1):
         dp[i][0] = 1
-    for j in range(1, amount + 1):
-        dp[0][j] = 0
+
     dp[0][0] = 1
     for i in range(1, len(coins) + 1):
         for j in range(1, amount + 1):
