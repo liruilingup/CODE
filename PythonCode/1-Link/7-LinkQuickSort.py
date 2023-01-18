@@ -31,7 +31,7 @@ def LinKQuickSort(head):
     small = None
     equal = None
     cur = head
-    while cur is not None:
+    while cur:
         t = cur
         cur = cur.next
         if t.val < head.val:
@@ -54,7 +54,7 @@ def LinKQuickSort(head):
     # 将三个链表组合成一起，这一步复杂度是 o(n)
     # 可以同时返回链表的头指针和尾指针加速链表的合并。
     for p in [small, equal, big]:
-        while p is not None:
+        while p :
             cur.next = p
             p = p.next
             cur = cur.next

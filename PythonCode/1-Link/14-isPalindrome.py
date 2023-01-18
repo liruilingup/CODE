@@ -41,4 +41,24 @@ def isPalindrome(head):
 print(isPalindrome(head))
 
 
+def isPalindrome1(head):
+    slow = fast = head
+    pre = None
+    while fast and fast.next:
+        fast = fast.next.next
+        tmp = slow
+        slow = slow.next
+        tmp.next = pre
+        pre = tmp
+
+    if fast:
+        slow = slow.next
+
+    while pre and pre.val == slow.val:
+        pre = pre.next
+        slow = slow.next
+
+    return not pre
+
+
 
